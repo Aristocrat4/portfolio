@@ -2,12 +2,16 @@
   <div
     class="flex justify-center md:justify-between items-center p-5 md:pr-8 md:pl-8 font-black shadow-md"
   >
-    <h2 class="text-xl">Gdanelia.dev</h2>
+    <h2 (click)="onLogo()" class="text-xl cursor-pointer">Gdanelia.dev</h2>
     <ul class="gap hidden md:flex md: gap-4">
-      <li>Home</li>
-      <li>About</li>
-      <li>Projects</li>
-      <li>Contact</li>
+      <li class="cursor-pointer hover:text-secondary transition-all">Home</li>
+      <li class="cursor-pointer hover:text-secondary transition-all">About</li>
+      <li class="cursor-pointer hover:text-secondary transition-all">
+        Projects
+      </li>
+      <li class="cursor-pointer hover:text-secondary transition-all">
+        Contact
+      </li>
     </ul>
   </div>
 </header>
