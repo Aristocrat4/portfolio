@@ -1,0 +1,26 @@
+.hero-image {
+  animation: morph 8s ease-in-out infinite;
+  background-image: url(https://s3.eu-west-1.amazonaws.com/hrra-prod-hrge-private/photo/374361/b32cd51e-0d97-4b37-b126-77c2edb6ccce.png?X-Amz-Expires=2400&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYPRMQM6UTIU2NONU/20240229/eu-west-1/s3/aws4_request&X-Amz-Date=20240229T184037Z&X-Amz-SignedHeaders=host&X-Amz-Signature=4f42cfa6ac27f88d113693406ec876309e69840877c0ba9b5a5af678628140d4);
+  // background-image: url(../../../assets/ggg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 25rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 20rem;
+  z-index: 0;
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
