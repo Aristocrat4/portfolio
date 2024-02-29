@@ -9,9 +9,16 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   onLogo() {
+    this.navigate(0);
+  }
+  onNavigation(position: number) {
+    this.navigate(position);
+  }
+  navigate(scroll: number) {
     window.scroll({
+      top: scroll,
+      left: 0,
       behavior: 'smooth',
-      top: 0,
     });
   }
 }

@@ -4,12 +4,28 @@
   >
     <h2 (click)="onLogo()" class="text-xl cursor-pointer">Gdanelia.dev</h2>
     <ul class="gap hidden md:flex md: gap-4">
-      <li class="cursor-pointer hover:text-secondary transition-all">Home</li>
-      <li class="cursor-pointer hover:text-secondary transition-all">About</li>
-      <li class="cursor-pointer hover:text-secondary transition-all">
+      <li
+        (click)="onLogo()"
+        class="cursor-pointer hover:text-secondary transition-all"
+      >
+        Home
+      </li>
+      <li
+        (click)="onNavigation(450)"
+        class="cursor-pointer hover:text-secondary transition-all"
+      >
+        About
+      </li>
+      <li
+        (click)="onNavigation(900)"
+        class="cursor-pointer hover:text-secondary transition-all"
+      >
         Projects
       </li>
-      <li class="cursor-pointer hover:text-secondary transition-all">
+      <li
+        (click)="onNavigation(2550)"
+        class="cursor-pointer hover:text-secondary transition-all"
+      >
         Contact
       </li>
     </ul>
