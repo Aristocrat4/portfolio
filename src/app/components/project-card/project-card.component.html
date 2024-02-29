@@ -1,41 +1,45 @@
 <div
-  class="pl-3 pr-3 pt-8 pb-8 md:flex md:justify-between md:py-7 container ml-auto mr-auto bg-[white] rounded-2xl shadow-xl hover:scale-105 transition-all"
+  class="pl-3 pr-3 pt-8 pb-8 md:flex md:justify-between md:py-7 container ml-auto mr-auto bg-[white] rounded-2xl shadow-xl hover:scale-105 transition-all md:max-w-[70%]"
 >
   <div class="image-about flex justify-center items-center">
     <img
       class="rounded-3xl w-[80%] max-w-[31.25rem]"
-      src="https://www.stefantopalovic.com/static/media/about-img.62b47e7f183d4b4e9feb.webp"
+      src="{{ project.imgUrl }}"
       alt="about-image"
     />
   </div>
   <div
     class="about-text text-center flex flex-col gap-3 mt-7 md:max-w-[31.25rem] md:text-start md:w-[50%] md:gap-6 md:mt-0 md:px-10"
   >
-    <h3 class="text-xl font-black uppercase md:text-center">about</h3>
+    <h3 class="text-xl font-black uppercase md:text-center">
+      {{ project.title }}
+    </h3>
     <p class="text-xl font-semibold">
-      Hey, my name is Galaktioni (Gala) Danelia and I'm a Front-End Engineer. My
-      passion is to create and develop a clean UI/UX for users.
+      {{ project.description }}
     </p>
 
     <div class="flex justify-center items-center pl-3 pr-3 pb-5">
       <img
-        src="https://skillicons.dev/icons?i=angular,rxjs,html,tailwind"
+        src="https://skillicons.dev/icons?i={{ project.usedStack }}"
         alt="skill-icon"
       />
     </div>
-    <div class="flex gap-5 justify-center">
+    <div class="flex gap-8 justify-center">
       <span
         class="font-black text-xl hover:text-secondary hover:scale-105 cursor-pointer transition-all"
-        >Code
-        <a target="_blank" class="w-8" href="https://github.com/aristocrat4/">
-          <i class="fa-brands fa-github fa-2xl" style="color: #2d2e32"></i> </a
+      >
+        <a target="_blank" class="w-8" href="{{ project.repoUrl }}">
+          Code<i
+            class="fa-brands fa-github fa-2xl ml-1"
+            style="color: #2d2e32"
+          ></i> </a
       ></span>
       <span
         class="font-black text-xl hover:text-secondary hover:scale-105 cursor-pointer transition-all"
-        >Live Demo
-        <a target="_blank" class="w-8" href="https://github.com/aristocrat4/">
-          <i
-            class="fa-solid fa-up-right-from-square fa-xl"
+      >
+        <a target="_blank" class="w-8" href="{{ project.demoUrl }}">
+          Live Demo<i
+            class="fa-solid fa-up-right-from-square fa-xl ml-1"
             style="color: #2d2e32"
           ></i> </a
       ></span>
